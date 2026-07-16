@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Run all the local models through the harness, then score them.
-# Waits for the model pulls to finish first in case they're still downloading.
 set -u
 cd "$(dirname "$0")/.."
 

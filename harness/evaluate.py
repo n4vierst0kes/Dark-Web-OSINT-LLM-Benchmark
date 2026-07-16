@@ -80,11 +80,12 @@ def f1(tp, fp, fn):
     return 2 * prec * rec / (prec + rec) if prec + rec else 0.0
 
 
+
 def macro_f1(counts):
     return sum(f1(*counts[e]) for e in ENTITIES) / len(ENTITIES)
 
 
-# ---- backends -------------------------------------------------------------
+# Backends
 
 def call_ollama(model, prompt):
     """Stream a completion from Ollama. Returns (text, ttft, gen_s, out_tok, in_tok)."""
@@ -154,7 +155,7 @@ def call_openai(model, prompt, key):
     return text, ttft or gen, gen, out_tok, in_tok
 
 
-# ---- progress bar ---------------------------------------------------------
+# Progress bar
 
 def progress_bar(done, total, model, elapsed, eta, width=28):
     """Redraw the per-model progress bar in place on stderr."""
@@ -171,7 +172,8 @@ def progress_bar(done, total, model, elapsed, eta, width=28):
         sys.stderr.flush()
 
 
-# ---- main loop ------------------------------------------------------------
+# Main loop
+
 
 def run(records, backend, model, k, writer, fh, key=None):
     total = len(records) * k
@@ -256,18 +258,20 @@ def run(records, backend, model, k, writer, fh, key=None):
             progress_bar(done, total, model, el, eta)
 
 
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--corpus", default="harness/corpus.jsonl")
     ap.add_argument("--out", default="harness/results.csv")
-    ap.add_argument("--backends", default="local")  # "local", "cloud", or both
+    ap.add_argument("--backends", default="local")  # local/cloud
     # pass a comma-separated list to sweep several local models in one go
     ap.add_argument("--local-model",
                     default="llama3.1:8b-instruct-q4_K_M")
     ap.add_argument("--cloud-model", default="gpt-4o-mini")
     ap.add_argument("-k", type=int, default=3)
     ap.add_argument("--limit", type=int, default=0)
-    # append instead of overwrite - handy for adding cloud rows to a local run
+    # append instead of overwrite 
     ap.add_argument("--append", action="store_true")
     args = ap.parse_args()
 

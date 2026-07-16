@@ -1,27 +1,18 @@
-# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
 venv/
 env/
-
-# Upstream dataset (fetch separately — see README)
 _extract/
 APTs-database-*.zip
 *.zip
-
-# Generated paper binaries
 *.docx
 *.pdf
-
-# Local scratch / backups
 *_local_backup.csv
 .old_backup/
 .gemini_removal_backup/
 /tmp/
 *.log
-
-# Secrets
 .env
 *.key

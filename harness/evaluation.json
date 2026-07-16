@@ -57,9 +57,9 @@
       "odes_bytes_total": 158406,
       "odes_bytes_mean": 1320.0,
       "cost_total_usd": 0.0110865,
-      "cost_per_task_usd": 9.239e-05,
+      "cost_per_task_usd": 9.239e-5,
       "f1_per_dollar": 56.65,
-      "cost_per_tp_usd": 2.305e-05
+      "cost_per_tp_usd": 2.305e-5
     },
     "local::llama3.1:8b-instruct-q4_K_M": {
       "model": "llama3.1:8b-instruct-q4_K_M",
@@ -118,9 +118,9 @@
       "odes_bytes_total": 0,
       "odes_bytes_mean": 0,
       "cost_total_usd": 0.00154761,
-      "cost_per_task_usd": 1.29e-05,
+      "cost_per_task_usd": 1.29e-5,
       "f1_per_dollar": 340.07,
-      "cost_per_tp_usd": 3.77e-06
+      "cost_per_tp_usd": 3.77e-6
     },
     "local::mistral:7b-instruct-q4_K_M": {
       "model": "mistral:7b-instruct-q4_K_M",
@@ -179,9 +179,9 @@
       "odes_bytes_total": 0,
       "odes_bytes_mean": 0,
       "cost_total_usd": 0.00186281,
-      "cost_per_task_usd": 1.552e-05,
+      "cost_per_task_usd": 1.552e-5,
       "f1_per_dollar": 234.91,
-      "cost_per_tp_usd": 5.26e-06
+      "cost_per_tp_usd": 5.26e-6
     },
     "local::phi3:mini": {
       "model": "phi3:mini",
@@ -240,9 +240,9 @@
       "odes_bytes_total": 0,
       "odes_bytes_mean": 0,
       "cost_total_usd": 0.00124023,
-      "cost_per_task_usd": 1.034e-05,
+      "cost_per_task_usd": 1.034e-5,
       "f1_per_dollar": 354.37,
-      "cost_per_tp_usd": 3.72e-06
+      "cost_per_tp_usd": 3.72e-6
     },
     "local::qwen2.5:1.5b-instruct-q4_K_M": {
       "model": "qwen2.5:1.5b-instruct-q4_K_M",
@@ -301,9 +301,9 @@
       "odes_bytes_total": 0,
       "odes_bytes_mean": 0,
       "cost_total_usd": 0.00038776,
-      "cost_per_task_usd": 3.23e-06,
+      "cost_per_task_usd": 3.23e-6,
       "f1_per_dollar": 1094.49,
-      "cost_per_tp_usd": 1.2e-06
+      "cost_per_tp_usd": 1.2e-6
     }
   },
   "viability": {
@@ -351,9 +351,7 @@
       "local::phi3:mini",
       "local::qwen2.5:1.5b-instruct-q4_K_M"
     ],
-    "dominated": [
-      "local::mistral:7b-instruct-q4_K_M"
-    ]
+    "dominated": ["local::mistral:7b-instruct-q4_K_M"]
   },
   "statistics": {
     "macro_f1_local_vs_cloud": {

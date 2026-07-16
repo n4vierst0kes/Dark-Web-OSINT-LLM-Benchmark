@@ -1,11 +1,11 @@
-# Local vs. Cloud LLM Pipelines for Dark Web OSINT — Evaluation Harness
+# Local vs. Cloud LLM Pipelines for Dark Web OSINT - Evaluation Harness
 
 Reproducibility harness for the report
 **_Dark Web OSINT: Evaluating Local and Cloud LLM Pipelines for Dark Web Intelligence_**.
 
 It routes one fixed CTI-extraction prompt over one static, pre-annotated corpus
-through two backends — a local model via **Ollama** and a cloud model via the
-**OpenAI** REST API — so that any measured variance is attributable to the
+through two backends - a local model via **Ollama** and a cloud model via the
+**OpenAI** REST API - so that any measured variance is attributable to the
 model, not the plumbing. Live Tor scraping is stubbed (simulated-hook mode):
 records are read straight from the pre-annotated corpus.
 
@@ -53,7 +53,7 @@ so `aggregate.py` reproduces the reported metrics without re-running inference.
 
 The corpus is derived from the MIT-licensed **APTs database** by Giorgio Di
 Tizio (paper: *Software Updates Strategies: a Quantitative Evaluation against
-Advanced Persistent Threats*). The ~577 MB bundle is **not** included here — set
+Advanced Persistent Threats*). The ~577 MB bundle is **not** included here - set
 it up locally before running `build_corpus.py`:
 
 ```bash
@@ -67,7 +67,7 @@ python3 harness/build_corpus.py _extract/giorgioditizio-APTs-database-<hash>
 The bundle's structured ground truth is anchored to 86 MITRE ATT&CK actors.
 Each actor's MITRE description is the input document, so the `apt`, `country`,
 and `goals` fields have strong textual support while `cves` and `techniques` do
-not appear in the description prose — for those two fields the correct behaviour
+not appear in the description prose - for those two fields the correct behaviour
 is to emit nothing, and any emitted value is a hallucination counted as a false
 positive. This makes the corpus a direct probe of the hallucination-reliability
 concern raised in the report, at the cost of `cves`/`techniques` recall being
