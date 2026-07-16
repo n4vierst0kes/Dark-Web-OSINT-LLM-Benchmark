@@ -1,0 +1,12 @@
+# Core scoring / stats (aggregate.py). scipy is optional — the code falls
+# back to a built-in paired t-test if it is not installed.
+scipy>=1.10
+
+# Corpus builder (build_corpus.py) reads the upstream report PDFs.
+pypdf>=4.0
+
+# Paper builder (build_docx.py) — only needed to regenerate the .docx report.
+python-docx>=1.1
+
+# Note: evaluate.py talks to Ollama and the OpenAI REST endpoint over the
+# standard library (urllib), so no HTTP/LLM client packages are required.

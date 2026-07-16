@@ -1,0 +1,367 @@
+{
+  "configs": {
+    "cloud::gpt-4o-mini": {
+      "model": "gpt-4o-mini",
+      "backend": "cloud",
+      "n_calls": 120,
+      "per_type": {
+        "apt": {
+          "precision": 0.819,
+          "recall": 0.8265,
+          "f1": 0.8227,
+          "tp": 181,
+          "fp": 40,
+          "fn": 38
+        },
+        "cves": {
+          "precision": 0.8507,
+          "recall": 1.0,
+          "f1": 0.9194,
+          "tp": 171,
+          "fp": 30,
+          "fn": 0
+        },
+        "techniques": {
+          "precision": 0.3636,
+          "recall": 0.5161,
+          "f1": 0.4267,
+          "tp": 48,
+          "fp": 84,
+          "fn": 45
+        },
+        "goals": {
+          "precision": 0.2637,
+          "recall": 0.6667,
+          "f1": 0.378,
+          "tp": 24,
+          "fp": 67,
+          "fn": 12
+        },
+        "country": {
+          "precision": 0.4318,
+          "recall": 0.95,
+          "f1": 0.5938,
+          "tp": 57,
+          "fp": 75,
+          "fn": 3
+        }
+      },
+      "macro_f1": 0.6281,
+      "micro_f1": 0.7094,
+      "latency_mean_s": 1.504,
+      "latency_p95_s": 2.18,
+      "latency_max_s": 6.013,
+      "ttft_mean_s": 0.731,
+      "tps_mean": 50.824,
+      "energy_mean_j": 0.0,
+      "odes_bytes_total": 158406,
+      "odes_bytes_mean": 1320.0,
+      "cost_total_usd": 0.0110865,
+      "cost_per_task_usd": 9.239e-05,
+      "f1_per_dollar": 56.65,
+      "cost_per_tp_usd": 2.305e-05
+    },
+    "local::llama3.1:8b-instruct-q4_K_M": {
+      "model": "llama3.1:8b-instruct-q4_K_M",
+      "backend": "local",
+      "n_calls": 120,
+      "per_type": {
+        "apt": {
+          "precision": 0.7273,
+          "recall": 0.6575,
+          "f1": 0.6906,
+          "tp": 144,
+          "fp": 54,
+          "fn": 75
+        },
+        "cves": {
+          "precision": 0.8358,
+          "recall": 0.9825,
+          "f1": 0.9032,
+          "tp": 168,
+          "fp": 33,
+          "fn": 3
+        },
+        "techniques": {
+          "precision": 0.2037,
+          "recall": 0.3548,
+          "f1": 0.2588,
+          "tp": 33,
+          "fp": 129,
+          "fn": 60
+        },
+        "goals": {
+          "precision": 0.0625,
+          "recall": 0.25,
+          "f1": 0.1,
+          "tp": 9,
+          "fp": 135,
+          "fn": 27
+        },
+        "country": {
+          "precision": 0.5278,
+          "recall": 0.95,
+          "f1": 0.6786,
+          "tp": 57,
+          "fp": 51,
+          "fn": 3
+        }
+      },
+      "macro_f1": 0.5263,
+      "micro_f1": 0.5905,
+      "latency_mean_s": 25.793,
+      "latency_p95_s": 50.419,
+      "latency_max_s": 68.979,
+      "ttft_mean_s": 9.767,
+      "tps_mean": 3.689,
+      "energy_mean_j": 386.899,
+      "odes_bytes_total": 0,
+      "odes_bytes_mean": 0,
+      "cost_total_usd": 0.00154761,
+      "cost_per_task_usd": 1.29e-05,
+      "f1_per_dollar": 340.07,
+      "cost_per_tp_usd": 3.77e-06
+    },
+    "local::mistral:7b-instruct-q4_K_M": {
+      "model": "mistral:7b-instruct-q4_K_M",
+      "backend": "local",
+      "n_calls": 120,
+      "per_type": {
+        "apt": {
+          "precision": 0.697,
+          "recall": 0.6301,
+          "f1": 0.6619,
+          "tp": 138,
+          "fp": 60,
+          "fn": 81
+        },
+        "cves": {
+          "precision": 0.7746,
+          "recall": 0.9649,
+          "f1": 0.8594,
+          "tp": 165,
+          "fp": 48,
+          "fn": 6
+        },
+        "techniques": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 123,
+          "fn": 93
+        },
+        "goals": {
+          "precision": 0.1522,
+          "recall": 0.5833,
+          "f1": 0.2414,
+          "tp": 21,
+          "fp": 117,
+          "fn": 15
+        },
+        "country": {
+          "precision": 0.3704,
+          "recall": 0.5,
+          "f1": 0.4255,
+          "tp": 30,
+          "fp": 51,
+          "fn": 30
+        }
+      },
+      "macro_f1": 0.4376,
+      "micro_f1": 0.5315,
+      "latency_mean_s": 31.046,
+      "latency_p95_s": 70.214,
+      "latency_max_s": 82.334,
+      "ttft_mean_s": 13.036,
+      "tps_mean": 3.561,
+      "energy_mean_j": 465.688,
+      "odes_bytes_total": 0,
+      "odes_bytes_mean": 0,
+      "cost_total_usd": 0.00186281,
+      "cost_per_task_usd": 1.552e-05,
+      "f1_per_dollar": 234.91,
+      "cost_per_tp_usd": 5.26e-06
+    },
+    "local::phi3:mini": {
+      "model": "phi3:mini",
+      "backend": "local",
+      "n_calls": 120,
+      "per_type": {
+        "apt": {
+          "precision": 0.5893,
+          "recall": 0.4521,
+          "f1": 0.5116,
+          "tp": 99,
+          "fp": 69,
+          "fn": 120
+        },
+        "cves": {
+          "precision": 0.8116,
+          "recall": 0.9825,
+          "f1": 0.8889,
+          "tp": 168,
+          "fp": 39,
+          "fn": 3
+        },
+        "techniques": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 69,
+          "fn": 93
+        },
+        "goals": {
+          "precision": 0.0714,
+          "recall": 0.3333,
+          "f1": 0.1176,
+          "tp": 12,
+          "fp": 156,
+          "fn": 24
+        },
+        "country": {
+          "precision": 0.5455,
+          "recall": 0.9,
+          "f1": 0.6792,
+          "tp": 54,
+          "fp": 45,
+          "fn": 6
+        }
+      },
+      "macro_f1": 0.4395,
+      "micro_f1": 0.5163,
+      "latency_mean_s": 20.671,
+      "latency_p95_s": 41.382,
+      "latency_max_s": 60.665,
+      "ttft_mean_s": 6.856,
+      "tps_mean": 5.183,
+      "energy_mean_j": 310.058,
+      "odes_bytes_total": 0,
+      "odes_bytes_mean": 0,
+      "cost_total_usd": 0.00124023,
+      "cost_per_task_usd": 1.034e-05,
+      "f1_per_dollar": 354.37,
+      "cost_per_tp_usd": 3.72e-06
+    },
+    "local::qwen2.5:1.5b-instruct-q4_K_M": {
+      "model": "qwen2.5:1.5b-instruct-q4_K_M",
+      "backend": "local",
+      "n_calls": 120,
+      "per_type": {
+        "apt": {
+          "precision": 0.5667,
+          "recall": 0.4658,
+          "f1": 0.5113,
+          "tp": 102,
+          "fp": 78,
+          "fn": 117
+        },
+        "cves": {
+          "precision": 0.8615,
+          "recall": 0.9825,
+          "f1": 0.918,
+          "tp": 168,
+          "fp": 27,
+          "fn": 3
+        },
+        "techniques": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 168,
+          "fn": 93
+        },
+        "goals": {
+          "precision": 0.2553,
+          "recall": 1.0,
+          "f1": 0.4068,
+          "tp": 36,
+          "fp": 105,
+          "fn": 0
+        },
+        "country": {
+          "precision": 0.2727,
+          "recall": 0.3,
+          "f1": 0.2857,
+          "tp": 18,
+          "fp": 48,
+          "fn": 42
+        }
+      },
+      "macro_f1": 0.4244,
+      "micro_f1": 0.4876,
+      "latency_mean_s": 6.462,
+      "latency_p95_s": 12.819,
+      "latency_max_s": 18.929,
+      "ttft_mean_s": 2.222,
+      "tps_mean": 15.087,
+      "energy_mean_j": 96.929,
+      "odes_bytes_total": 0,
+      "odes_bytes_mean": 0,
+      "cost_total_usd": 0.00038776,
+      "cost_per_task_usd": 3.23e-06,
+      "f1_per_dollar": 1094.49,
+      "cost_per_tp_usd": 1.2e-06
+    }
+  },
+  "viability": {
+    "cloud::gpt-4o-mini": {
+      "macro_f1_ok": true,
+      "p95_latency_ok": true,
+      "odes_ok": false,
+      "cost_ok": true,
+      "viable": false
+    },
+    "local::llama3.1:8b-instruct-q4_K_M": {
+      "macro_f1_ok": true,
+      "p95_latency_ok": true,
+      "odes_ok": true,
+      "cost_ok": true,
+      "viable": true
+    },
+    "local::mistral:7b-instruct-q4_K_M": {
+      "macro_f1_ok": true,
+      "p95_latency_ok": true,
+      "odes_ok": true,
+      "cost_ok": true,
+      "viable": true
+    },
+    "local::phi3:mini": {
+      "macro_f1_ok": true,
+      "p95_latency_ok": true,
+      "odes_ok": true,
+      "cost_ok": true,
+      "viable": true
+    },
+    "local::qwen2.5:1.5b-instruct-q4_K_M": {
+      "macro_f1_ok": true,
+      "p95_latency_ok": true,
+      "odes_ok": true,
+      "cost_ok": true,
+      "viable": true
+    }
+  },
+  "pareto": {
+    "objectives": "max macro_f1, min p95_latency_s, min cost_per_task_usd, min odes_bytes",
+    "frontier": [
+      "cloud::gpt-4o-mini",
+      "local::llama3.1:8b-instruct-q4_K_M",
+      "local::phi3:mini",
+      "local::qwen2.5:1.5b-instruct-q4_K_M"
+    ],
+    "dominated": [
+      "local::mistral:7b-instruct-q4_K_M"
+    ]
+  },
+  "statistics": {
+    "macro_f1_local_vs_cloud": {
+      "t": -2.5562344224983176,
+      "p": 0.014589751805692459,
+      "d": -0.3405669313381213,
+      "n": 40,
+      "mean_diff": -0.052176675000000006
+    }
+  }
+}
