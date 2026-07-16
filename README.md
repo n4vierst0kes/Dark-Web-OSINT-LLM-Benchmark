@@ -1,4 +1,4 @@
-# Robin Framework — CTI Extraction Benchmark
+# Local vs. Cloud LLM Pipelines for Dark Web OSINT — Evaluation Harness
 
 Reproducibility harness for the report
 **_Dark Web OSINT: Evaluating Local and Cloud LLM Pipelines for Dark Web Intelligence_**.
